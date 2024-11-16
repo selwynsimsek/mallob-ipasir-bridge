@@ -139,7 +139,7 @@ int MallobIpasir::solve() {
     bool hasInterrupted = false;
 
     while (true) {
-
+sleep(0.1);
         // Check termination / interruption
         if (!hasInterrupted && _terminate_callback != nullptr && _terminate_callback(_terminate_data) != 0) {
             printf("(%.3f) Caught terminate signal\n", Timer::elapsedSeconds());
